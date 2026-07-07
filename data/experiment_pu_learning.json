@@ -1,0 +1,30 @@
+{
+  "observed_pos_rate": 0.04,
+  "elkan_noto_c": 0.8617,
+  "estimated_true_prevalence": 0.0465,
+  "label_missing_pp": 0.0064,
+  "baseline_spatial": {
+    "mean": 0.7126,
+    "folds": [
+      0.7294,
+      0.7112,
+      0.774,
+      0.7125,
+      0.6357
+    ]
+  },
+  "bagging_pu_spatial": {
+    "mean": 0.7081,
+    "folds": [
+      0.7268,
+      0.7071,
+      0.7491,
+      0.7184,
+      0.6391
+    ],
+    "T": 10
+  },
+  "delta_spatial": -0.0045,
+  "verdict": "CALIB-ONLY (랭킹 불변 → PU 는 유병률·확률보정 레이어로 채택, 현행 랭킹 견고)",
+  "elapsed_sec": 630.5
+}

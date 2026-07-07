@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# 대용량 원본/백업 데이터 (배포 불필요 — 혹시 복사되어도 업로드 제외)
+*.bak
+*.precal
+*.preconf
+*.pregukyu
+*.preroad2
+data/real_forest_polygons*.csv
+*.log
+*.log.err
+
+# secrets (로컬 테스트용 키 — 절대 업로드 금지)
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db

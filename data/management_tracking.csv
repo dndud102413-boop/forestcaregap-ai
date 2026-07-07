@@ -1,0 +1,9 @@
+polygon_id,before_score,after_score,management_action,management_date,field_survey_done,owner_contacted,support_program_linked,notes
+GW-0001,82,60,선택적 간벌 시행,2025-03-15,True,True,숲가꾸기 지원사업,간벌 후 수관밀도 개선 확인
+GW-0002,75,55,사방사업 시행,2025-05-20,True,True,사방사업,산사태 위험구간 정비 완료
+GW-0003,68,52,산불 연료물질 관리,2025-04-10,True,False,산불예방 숲가꾸기,가연성 연료물질 제거
+GW-0004,90,65,숲가꾸기 및 상담,2025-06-01,True,True,산림경영 상담,산주 동의 후 관리 착수
+GW-0005,55,53,현장조사만 시행,2025-02-28,True,False,현장조사·산림조사 지원,추가 관리 협의 중
+GW-0006,80,80,미시행,2025-01-15,False,False,없음,산주 미연락 상태 지속
+GW-0007,72,48,간벌 및 가지치기,2025-05-05,True,True,숲가꾸기 지원사업,관리 효과 양호
+GW-0008,60,45,모니터링 및 부분 관리,2025-06-10,True,True,산림경영 상담,부분 개선 확인

@@ -1,0 +1,103 @@
+{
+  "baseline": {
+    "random": 0.9811,
+    "spatial": 0.6885,
+    "random_folds": [
+      0.982,
+      0.9822,
+      0.9813,
+      0.9802,
+      0.9798
+    ],
+    "spatial_folds": [
+      0.7123,
+      0.6785,
+      0.7516,
+      0.6883,
+      0.6117
+    ],
+    "n_features": 20
+  },
+  "baseline_gukyu": {
+    "random": 0.9804,
+    "spatial": 0.7033,
+    "random_folds": [
+      0.9818,
+      0.9814,
+      0.9804,
+      0.9796,
+      0.9791
+    ],
+    "spatial_folds": [
+      0.7202,
+      0.6703,
+      0.771,
+      0.7164,
+      0.6385
+    ],
+    "n_features": 23
+  },
+  "importance_top": [
+    [
+      "neighbor_mgmt_rate",
+      0.7847
+    ],
+    [
+      "diam_o",
+      0.03
+    ],
+    [
+      "dens_o",
+      0.0287
+    ],
+    [
+      "gukyu_dist_m",
+      0.0242
+    ],
+    [
+      "forest_road_distance_m",
+      0.0184
+    ],
+    [
+      "age_class",
+      0.0181
+    ],
+    [
+      "elevation_m",
+      0.0136
+    ],
+    [
+      "soil_PRRCK_LARG",
+      0.0134
+    ],
+    [
+      "soil_PRRCK_MDDL",
+      0.0109
+    ],
+    [
+      "gukyu_in500",
+      0.0073
+    ],
+    [
+      "soil_SLTP_CD",
+      0.0068
+    ],
+    [
+      "slope_deg",
+      0.0064
+    ],
+    [
+      "carbon_storage_tco2",
+      0.0058
+    ],
+    [
+      "timber_potential_m3",
+      0.0054
+    ]
+  ],
+  "gukyu_importance_sum": 0.0338,
+  "delta_spatial": 0.0148,
+  "delta_random": -0.0007,
+  "elapsed_sec": 933.7,
+  "verdict": "APPLY (honest 개선)"
+}

@@ -1,0 +1,264 @@
+{
+  "n": 562276,
+  "base_rate": 0.04,
+  "n_features": 26,
+  "features": [
+    "forest_road_distance_m",
+    "slope_deg",
+    "elevation_m",
+    "area_ha",
+    "age_class",
+    "dens_o",
+    "diam_o",
+    "landslide_o",
+    "fire_o",
+    "aspect_south",
+    "is_conifer",
+    "protected_i",
+    "carbon_storage_tco2",
+    "annual_absorption_tco2",
+    "timber_potential_m3",
+    "neighbor_mgmt_rate",
+    "soil_PRRCK_LARG",
+    "soil_PRRCK_MDDL",
+    "soil_SLTP_CD",
+    "soil_SLANT_TYP",
+    "gukyu_dist_m",
+    "gukyu_in500",
+    "gukyu_in1km",
+    "road2_dist_m",
+    "road2_in100",
+    "road2_in300"
+  ],
+  "honest_auc": {
+    "fold_mean": 0.7126,
+    "pooled_oof": 0.7115,
+    "folds": [
+      0.7294,
+      0.7112,
+      0.774,
+      0.7125,
+      0.6357
+    ],
+    "fold_std": 0.0447
+  },
+  "per_region_auc": {
+    "미상": {
+      "auc": 0.9843,
+      "n": 431,
+      "pos": 27
+    },
+    "속초시": {
+      "auc": 0.9536,
+      "n": 3219,
+      "pos": 107
+    },
+    "화천군": {
+      "auc": 0.8221,
+      "n": 25052,
+      "pos": 3017
+    },
+    "강릉시": {
+      "auc": 0.7862,
+      "n": 41258,
+      "pos": 431
+    },
+    "철원군": {
+      "auc": 0.78,
+      "n": 2983,
+      "pos": 7
+    },
+    "횡성군": {
+      "auc": 0.7799,
+      "n": 47449,
+      "pos": 1734
+    },
+    "춘천시": {
+      "auc": 0.779,
+      "n": 41748,
+      "pos": 3780
+    },
+    "동해시": {
+      "auc": 0.7708,
+      "n": 5070,
+      "pos": 97
+    },
+    "고성군": {
+      "auc": 0.7604,
+      "n": 9207,
+      "pos": 334
+    },
+    "양구군": {
+      "auc": 0.7586,
+      "n": 15385,
+      "pos": 162
+    },
+    "홍천군": {
+      "auc": 0.7566,
+      "n": 75433,
+      "pos": 2657
+    },
+    "평창군": {
+      "auc": 0.7341,
+      "n": 48240,
+      "pos": 1418
+    },
+    "태백시": {
+      "auc": 0.6917,
+      "n": 10399,
+      "pos": 340
+    },
+    "원주시": {
+      "auc": 0.6909,
+      "n": 27325,
+      "pos": 937
+    },
+    "영월군": {
+      "auc": 0.6673,
+      "n": 53304,
+      "pos": 954
+    },
+    "양양군": {
+      "auc": 0.6511,
+      "n": 20510,
+      "pos": 208
+    },
+    "정선군": {
+      "auc": 0.6487,
+      "n": 46146,
+      "pos": 1292
+    },
+    "인제군": {
+      "auc": 0.5942,
+      "n": 47106,
+      "pos": 2830
+    },
+    "삼척시": {
+      "auc": 0.5043,
+      "n": 42011,
+      "pos": 2179
+    }
+  },
+  "per_region_summary": {
+    "best": 0.9843,
+    "worst": 0.5043,
+    "mean": 0.7428,
+    "n_regions": 19
+  },
+  "ownership_subgroup": {
+    "국유 추정(국유림 500m내)": {
+      "auc": 0.7272,
+      "n": 87507,
+      "관리시행률(%)": 1.85
+    },
+    "사유 추정(그 외)": {
+      "auc": 0.7009,
+      "n": 474769,
+      "관리시행률(%)": 4.4
+    }
+  },
+  "ranking_lift": {
+    "top5%": {
+      "k": 28114,
+      "precision": 0.18,
+      "lift": 4.5,
+      "recall": 0.2248
+    },
+    "top10%": {
+      "k": 56228,
+      "precision": 0.1422,
+      "lift": 3.55,
+      "recall": 0.3551
+    },
+    "top20%": {
+      "k": 112455,
+      "precision": 0.1005,
+      "lift": 2.51,
+      "recall": 0.5022
+    }
+  },
+  "brier": 0.0676,
+  "reliability": [
+    {
+      "bin": "0.0-0.1",
+      "pred_mean": 0.042,
+      "obs_rate": 0.026,
+      "n": 483592
+    },
+    {
+      "bin": "0.1-0.2",
+      "pred_mean": 0.14,
+      "obs_rate": 0.077,
+      "n": 15061
+    },
+    {
+      "bin": "0.2-0.3",
+      "pred_mean": 0.246,
+      "obs_rate": 0.08,
+      "n": 9148
+    },
+    {
+      "bin": "0.3-0.4",
+      "pred_mean": 0.346,
+      "obs_rate": 0.101,
+      "n": 5063
+    },
+    {
+      "bin": "0.4-0.5",
+      "pred_mean": 0.454,
+      "obs_rate": 0.116,
+      "n": 5089
+    },
+    {
+      "bin": "0.5-0.6",
+      "pred_mean": 0.552,
+      "obs_rate": 0.108,
+      "n": 7485
+    },
+    {
+      "bin": "0.6-0.7",
+      "pred_mean": 0.651,
+      "obs_rate": 0.101,
+      "n": 10291
+    },
+    {
+      "bin": "0.7-0.8",
+      "pred_mean": 0.748,
+      "obs_rate": 0.129,
+      "n": 9360
+    },
+    {
+      "bin": "0.8-0.9",
+      "pred_mean": 0.856,
+      "obs_rate": 0.173,
+      "n": 11027
+    },
+    {
+      "bin": "0.9-1.0",
+      "pred_mean": 0.938,
+      "obs_rate": 0.286,
+      "n": 6160
+    }
+  ],
+  "ablation": {
+    "full": 0.7126,
+    "without_neighbor": 0.6674,
+    "neighbor_only": 0.5913,
+    "neighbor_contribution": 0.0452,
+    "others_contribution_over_neighbor": 0.1213
+  },
+  "baselines": {
+    "random": 0.5,
+    "structural_rules_clean": 0.5368,
+    "ml_full": 0.7126,
+    "ml_vs_rules_gain": 0.1758,
+    "care_gap_score_contaminated_ref": 0.8009,
+    "_note": "care_gap_score 는 라벨 파생 규칙 포함(누수)이라 참고용. 공정비교는 structural_rules_clean."
+  },
+  "leakage_check": {
+    "leak_safe": 0.7126,
+    "naive_with_leakage": 0.981,
+    "inflation_prevented": 0.2685
+  },
+  "elapsed_sec": 786.8
+}

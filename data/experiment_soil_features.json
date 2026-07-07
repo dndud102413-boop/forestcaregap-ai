@@ -1,0 +1,114 @@
+{
+  "baseline": {
+    "random": 0.9815,
+    "spatial": 0.6753,
+    "random_folds": [
+      0.9824,
+      0.9823,
+      0.9817,
+      0.9807,
+      0.9801
+    ],
+    "spatial_folds": [
+      0.7074,
+      0.6936,
+      0.7417,
+      0.6743,
+      0.5592
+    ],
+    "n_features": 16
+  },
+  "baseline_soil": {
+    "random": 0.9815,
+    "spatial": 0.6873,
+    "random_folds": [
+      0.9822,
+      0.9825,
+      0.9818,
+      0.9805,
+      0.9806
+    ],
+    "spatial_folds": [
+      0.7124,
+      0.6842,
+      0.7583,
+      0.6676,
+      0.6144
+    ],
+    "n_features": 25
+  },
+  "importance_top": [
+    [
+      "neighbor_mgmt_rate",
+      0.8152
+    ],
+    [
+      "diam_o",
+      0.0331
+    ],
+    [
+      "dens_o",
+      0.0226
+    ],
+    [
+      "forest_road_distance_m",
+      0.0196
+    ],
+    [
+      "age_class",
+      0.0178
+    ],
+    [
+      "elevation_m",
+      0.0131
+    ],
+    [
+      "soil_PRRCK_LARG",
+      0.0109
+    ],
+    [
+      "soil_PRRCK_MDDL",
+      0.0085
+    ],
+    [
+      "slope_deg",
+      0.0065
+    ],
+    [
+      "soil_SLTP_CD",
+      0.0056
+    ],
+    [
+      "soil_SLANT_TYP",
+      0.0048
+    ],
+    [
+      "carbon_storage_tco2",
+      0.0048
+    ],
+    [
+      "timber_potential_m3",
+      0.0048
+    ],
+    [
+      "landslide_o",
+      0.0047
+    ]
+  ],
+  "soil_importance_sum": 0.0445,
+  "delta_spatial": 0.012,
+  "delta_random": 0.0,
+  "elapsed_sec": 997.0,
+  "soil_cols": {
+    "SLTP_CD": "토양형",
+    "SCSTX_CD": "토성",
+    "SLDPT_TPCD": "토심",
+    "PRRCK_LARG": "모암대",
+    "PRRCK_MDDL": "모암중",
+    "TPGRP_TPCD": "지형군",
+    "PRDN_FOM_C": "퇴적양식",
+    "SLANT_TYP": "사면형",
+    "CLZN_CD": "기후대"
+  },
+  "verdict": "APPLY (honest 개선)"
+}

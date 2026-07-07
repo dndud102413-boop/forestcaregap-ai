@@ -1,0 +1,109 @@
+{
+  "baseline": {
+    "random": 0.9815,
+    "spatial": 0.6753,
+    "random_folds": [
+      0.9824,
+      0.9823,
+      0.9817,
+      0.9807,
+      0.9801
+    ],
+    "spatial_folds": [
+      0.7074,
+      0.6936,
+      0.7417,
+      0.6743,
+      0.5592
+    ],
+    "n_features": 16
+  },
+  "baseline_soil": {
+    "random": 0.9811,
+    "spatial": 0.6916,
+    "random_folds": [
+      0.982,
+      0.9822,
+      0.9812,
+      0.9803,
+      0.9799
+    ],
+    "spatial_folds": [
+      0.7124,
+      0.6804,
+      0.758,
+      0.686,
+      0.6213
+    ],
+    "n_features": 20
+  },
+  "importance_top": [
+    [
+      "neighbor_mgmt_rate",
+      0.8235
+    ],
+    [
+      "diam_o",
+      0.0299
+    ],
+    [
+      "dens_o",
+      0.0285
+    ],
+    [
+      "forest_road_distance_m",
+      0.0195
+    ],
+    [
+      "age_class",
+      0.016
+    ],
+    [
+      "elevation_m",
+      0.0136
+    ],
+    [
+      "soil_PRRCK_LARG",
+      0.0114
+    ],
+    [
+      "soil_PRRCK_MDDL",
+      0.0089
+    ],
+    [
+      "slope_deg",
+      0.007
+    ],
+    [
+      "soil_SLTP_CD",
+      0.0062
+    ],
+    [
+      "timber_potential_m3",
+      0.0055
+    ],
+    [
+      "carbon_storage_tco2",
+      0.0054
+    ],
+    [
+      "soil_SLANT_TYP",
+      0.0053
+    ],
+    [
+      "area_ha",
+      0.0053
+    ]
+  ],
+  "soil_importance_sum": 0.0318,
+  "delta_spatial": 0.0163,
+  "delta_random": -0.0004,
+  "elapsed_sec": 958.5,
+  "soil_cols": {
+    "PRRCK_LARG": "모암대",
+    "PRRCK_MDDL": "모암중",
+    "SLTP_CD": "토양형",
+    "SLANT_TYP": "사면형"
+  },
+  "verdict": "APPLY (honest 개선)"
+}

@@ -1,0 +1,103 @@
+{
+  "baseline": {
+    "random": 0.9804,
+    "spatial": 0.6956,
+    "random_folds": [
+      0.9817,
+      0.9814,
+      0.9806,
+      0.9791,
+      0.979
+    ],
+    "spatial_folds": [
+      0.7164,
+      0.6606,
+      0.7679,
+      0.7025,
+      0.6306
+    ],
+    "n_features": 23
+  },
+  "baseline_road2": {
+    "random": 0.9817,
+    "spatial": 0.7105,
+    "random_folds": [
+      0.9827,
+      0.9827,
+      0.9819,
+      0.9811,
+      0.9802
+    ],
+    "spatial_folds": [
+      0.73,
+      0.6874,
+      0.7657,
+      0.7186,
+      0.6506
+    ],
+    "n_features": 26
+  },
+  "importance_top": [
+    [
+      "neighbor_mgmt_rate",
+      0.7924
+    ],
+    [
+      "diam_o",
+      0.032
+    ],
+    [
+      "dens_o",
+      0.0288
+    ],
+    [
+      "gukyu_dist_m",
+      0.0208
+    ],
+    [
+      "forest_road_distance_m",
+      0.0166
+    ],
+    [
+      "age_class",
+      0.0144
+    ],
+    [
+      "soil_PRRCK_LARG",
+      0.0133
+    ],
+    [
+      "elevation_m",
+      0.0123
+    ],
+    [
+      "soil_PRRCK_MDDL",
+      0.0097
+    ],
+    [
+      "road2_dist_m",
+      0.0086
+    ],
+    [
+      "gukyu_in500",
+      0.0062
+    ],
+    [
+      "soil_SLTP_CD",
+      0.0054
+    ],
+    [
+      "slope_deg",
+      0.0053
+    ],
+    [
+      "timber_potential_m3",
+      0.0045
+    ]
+  ],
+  "road2_importance_sum": 0.0126,
+  "delta_spatial": 0.0149,
+  "delta_random": 0.0013,
+  "elapsed_sec": 1036.4,
+  "verdict": "APPLY (honest 개선)"
+}

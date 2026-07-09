@@ -321,11 +321,11 @@ def ai_enrich(df: pd.DataFrame, _src: str):
     return ml_engine.predict_dataframe(df, b) if b is not None else None
 
 
-ml_bundle = load_ml_bundle()
+ml_bundle = None  # 런타임 미로드: 75MB 모델을 올리지 않아 부팅 메모리 절감(OOM 방지). 점수·유형은 parquet 사전계산값, 검증지표는 validation_report.json 사용.
 # 사전계산 parquet 에 AI 컬럼이 있으면 그대로 사용(빠름), 없으면 실시간 추론
 if "ai_gap_score" in forest_df.columns:
     ai_df = forest_df
-elif ml_bundle is not None:
+elif load_ml_bundle() is not None:
     ai_df = ai_enrich(forest_df, data_source)
 else:
     ai_df = None
@@ -452,9 +452,12 @@ with tab2:
         seg_name = str(airow_c.get("ai_segment_name", "일반관리형"))
         pct_top = float((forest_df["ai_gap_score"] >= gap_score).mean()) * 100
         try:
-            card_reasons = [c["요인"] for c in ml_engine.explain_row(row, ml_bundle, topk=3)] if ml_bundle else []
+            if ml_bundle:
+                card_reasons = [c["요인"] for c in ml_engine.explain_row(row, ml_bundle, topk=3)]
+            else:  # 모델 미로드 시 규칙기반 기여요인으로 대체(값 유사, 부팅 메모리 절감)
+                card_reasons = [f["factor"] for f in scoring_result["factors"][:3]]
         except Exception:
-            card_reasons = []
+            card_reasons = [f["factor"] for f in scoring_result["factors"][:3]]
         score_label = "관리공백 점수 (AI)"
     else:
         gap_score = float(scoring_result["score"])
@@ -542,9 +545,13 @@ with tab2:
         a1.metric("AI 관리공백 점수", f"{airow['ai_gap_score']:.0f} / 100")
         a2.metric("AI 추정 관리확률", f"{airow['ai_management_prob'] * 100:.0f}%")
         a3.metric("관리유형(AI 군집)", airow["ai_segment_name"])
-        ai_contribs = ml_engine.explain_row(row, ml_bundle, topk=5)
-        st.caption("AI 근거 — 트리경로 기반 기여분해 (SHAP 동일 취지의 가법적 설명, 공백↑ = 위험 가중 요인)")
-        st.dataframe(pd.DataFrame(ai_contribs), hide_index=True, width="stretch")
+        if ml_bundle is not None:
+            ai_contribs = ml_engine.explain_row(row, ml_bundle, topk=5)
+            st.caption("AI 근거 — 트리경로 기반 기여분해 (SHAP 동일 취지의 가법적 설명, 공백↑ = 위험 가중 요인)")
+            st.dataframe(pd.DataFrame(ai_contribs), hide_index=True, width="stretch")
+        elif scoring_result.get("factors"):
+            st.caption("관리공백 주요 기여 요인 (규칙기반 요약 — AI 점수는 학습모델 사전계산값)")
+            st.dataframe(pd.DataFrame(scoring_result["factors"][:5]), hide_index=True, width="stretch")
 
     # 💰 경제가치 평가
     if "val_total_asset" in row.index:
